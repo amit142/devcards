@@ -31,7 +31,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 sh '''
-                    sudo -S docker build -t ${IMAGE_NAME}:${BUILD_ID} .
+                    docker build -t ${IMAGE_NAME}:${BUILD_ID} .
                 '''
             }
         }
